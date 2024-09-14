@@ -34,7 +34,7 @@ For a detailed explanation of the methodology, please refer to the paper include
 
 ## Citation
 If you use Neo-GCN in your research, please cite:
-\`\`\`bibtex
+\`\`\`BibTeX
 @article{ghadiri2024neo,
   title={A Neo-Approach for Node Classification: Optimizing Identity-aware Graph Convolutional Networks with Natural Gradient Descent in Citation Graphs},
   author={Reza Ghadiri, Mojtaba Ghadiri, and Soheila Ashkezari-Toussi},
