@@ -1,7 +1,7 @@
 
 # Neo-GCN: Optimizing Identity-aware Graph Convolutional Networks with Natural Gradient Descent
 
-Welcome to the **Neo-GCN** project! This repository contains the implementation of Neo-GCN, an innovative approach that integrates **Natural Gradient Descent (NGD)** with **Identity-aware Graph Neural Networks (ID-GCN)** to enhance the performance of Graph Convolutional Networks (GCNs). Neo-GCN addresses key challenges in GNNs such as slow convergence, gradient vanishing, and over-smoothing, resulting in improved accuracy and scalability in graph-based learning tasks.
+Welcome to the **Neo-GCN** project! This repository contains the implementation of Neo-GCN, an innovative approach that integrates **Natural Gradient Descent (NGD)** with **Identity-aware Graph Neural Networks (ID-GNN)** to enhance the performance of Graph Convolutional Networks (GCNs). Neo-GCN addresses key challenges in GNNs such as slow convergence, gradient vanishing, and over-smoothing, resulting in improved accuracy and scalability in graph-based learning tasks.
 
 ## Key Features
 - **Natural Gradient Descent (NGD)**: Efficient optimization that accounts for the geometry of the parameter space, enabling faster convergence and better generalization.
