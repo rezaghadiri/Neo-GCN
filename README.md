@@ -1,144 +1,67 @@
 
 # Neo-GCN: Optimizing Identity-aware Graph Convolutional Networks with Natural Gradient Descent
 
-![GitHub repo size](https://img.shields.io/github/repo-size/username/Neo-GCN) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen) ![License](https://img.shields.io/github/license/username/Neo-GCN)
+Welcome to the **Neo-GCN** project! This repository contains the implementation of Neo-GCN, an innovative approach that integrates **Natural Gradient Descent (NGD)** with **Identity-aware Graph Neural Networks (ID-GCN)** to enhance the performance of Graph Convolutional Networks (GCNs). Neo-GCN addresses key challenges in GNNs such as slow convergence, gradient vanishing, and over-smoothing, resulting in improved accuracy and scalability in graph-based learning tasks.
 
-## Overview
+## Key Features
+- **Natural Gradient Descent (NGD)**: Efficient optimization that accounts for the geometry of the parameter space, enabling faster convergence and better generalization.
+- **Identity-aware GCN**: Preserves node-specific identity features to prevent over-smoothing, enhancing the model's ability to differentiate nodes in deeper networks.
+- **Benchmark Performance**: Outperforms traditional GCNs and other state-of-the-art models on widely-used datasets such as Cora, CiteSeer, and PubMed.
 
-**Neo-GCN** is a cutting-edge approach for enhancing the performance of Graph Convolutional Networks (GCNs) by integrating Natural Gradient Descent (NGD) with Identity-aware Graph Neural Networks (ID-GCNs). Neo-GCN addresses key challenges in GCN optimization, such as slow convergence, over-smoothing, and gradient vanishing. By incorporating NGD, Neo-GCN efficiently optimizes weight parameters while preserving unique node characteristics through identity features. This results in improved classification accuracy, better generalization, and enhanced stability, even in deeper networks.
+## Highlights
+- **Natural Gradient Descent**: NGD uses the Fisher Information Matrix (FIM) for more accurate and efficient updates in GCN optimization, leading to more stable training.
+- **Identity-aware Mechanisms**: Incorporates identity features into the GCN model to retain unique node characteristics, improving expressiveness and classification accuracy.
+- **Improved Scalability**: By integrating NGD and identity-aware mechanisms, Neo-GCN scales effectively, even in deeper GNN architectures.
 
-### Key Features
-- **Natural Gradient Descent (NGD):** A powerful optimization method that leverages the geometry of the parameter space for faster convergence and more stable training.
-- **Identity-aware Mechanism:** Incorporates unique node identity features into the graph convolution process, mitigating over-smoothing and boosting expressiveness.
-- **Benchmark Performance:** Neo-GCN outperforms traditional GCNs and state-of-the-art variants in tasks like node classification on datasets such as Cora, CiteSeer, and PubMed.
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Benchmarks](#benchmarks)
-- [Experimental Setup](#experimental-setup)
-- [Results](#results)
-- [Contributing](#contributing)
-- [Citation](#citation)
-- [License](#license)
-
----
-
-## Installation
-
-To get started with Neo-GCN, clone the repository and install the necessary dependencies.
-
-```bash
-git clone https://github.com/username/Neo-GCN.git
-cd Neo-GCN
-pip install -r requirements.txt
-```
-
-Make sure you have PyTorch, PyG, and other relevant packages installed.
-
----
-
-## Usage
-
-### Training the Model
-To train Neo-GCN on a specific dataset (e.g., Cora), use the following command:
-
-```bash
-python train.py --dataset cora --epochs 100 --learning_rate 0.01
-```
-
-The script supports various datasets, including **Cora**, **CiteSeer**, and **PubMed**. You can also fine-tune other hyperparameters, such as the learning rate, number of layers, and optimizer type.
-
-### Arguments:
-- `--dataset`: Choose between `cora`, `citeseer`, `pubmed`
-- `--epochs`: Set the number of training epochs
-- `--learning_rate`: Define the learning rate
-- `--optimizer`: Choose between `adam`, `sgd`
-  
----
-
-## Benchmarks
-
-Neo-GCN has been extensively tested and shows strong performance across multiple benchmark datasets. Below is a summary of its performance in node classification tasks.
-
-| Dataset   | Accuracy (Neo-GCN) | Accuracy (GCN) | Accuracy (ID-GCN) |
-|-----------|--------------------|----------------|-------------------|
-| **Cora**  | 91.04%             | 89.44%         | 86.30%            |
-| **CiteSeer** | 80.67%          | 79.80%         | 71.90%            |
-| **PubMed**  | 88.27%           | 87.16%         | -                 |
-
-Neo-GCN demonstrates its superiority, particularly in handling deeper networks with complex graph structures.
-
----
-
-## Experimental Setup
-
-We used the following benchmark datasets for training and evaluation:
-
-- **Cora**: 2,708 nodes, 5,429 edges, 7 classes
-- **CiteSeer**: 3,327 nodes, 4,732 edges, 6 classes
-- **PubMed**: 19,717 nodes, 44,338 edges, 3 classes
-
-For each dataset, we trained Neo-GCN using both SGD and Adam optimizers, with learning rates and other hyperparameters fine-tuned for optimal performance.
-
----
+## Datasets
+Neo-GCN has been evaluated on the following benchmark datasets:
+- **Cora**: Citation network with 2,708 nodes and 5,429 edges.
+- **CiteSeer**: Citation network with 3,327 nodes and 4,732 edges.
+- **PubMed**: Citation network with 19,717 nodes and 44,338 edges.
 
 ## Results
+Neo-GCN achieves state-of-the-art classification accuracy across these datasets, outperforming other GNN models. Some notable results include:
+- **Cora**: 91.04% accuracy
+- **CiteSeer**: 80.67% accuracy
+- **PubMed**: 88.27% accuracy
 
-Neo-GCN consistently outperforms traditional GCN and ID-GCN models in classification tasks, particularly in datasets with complex node relationships. By integrating NGD and identity-aware mechanisms, Neo-GCN improves both the accuracy and stability of GCNs.
+## Installation
+To run Neo-GCN, clone the repository and install the required dependencies:
+\`\`\`bash
+git clone https://github.com/rezaghadiri/Neo-GCN
+cd Neo-GCN
+pip install -r requirements.txt
+\`\`\`
 
-### Sample Results (Cora Dataset):
-- **Test Accuracy**: 91.04%
-- **Validation Accuracy**: 90.37%
-- **Loss**: 0.45
+## Usage
+You can train the Neo-GCN model on any of the supported datasets:
+\`\`\`bash
+python train.py --dataset cora
+\`\`\`
 
----
+Available options include:
+- \`--dataset\`: Choose between \`cora\`, \`citeseer\`, or \`pubmed\`.
+- \`--optimizer\`: Specify the optimizer (\`adam\` or \`sgd\`).
+- \`--learning_rate\`: Set the learning rate (default is \`0.01\`).
+- \`--epochs\`: Number of training epochs (default is \`100\`).
 
-## Contributing
+## Methodology
+Neo-GCN combines the following approaches:
+1. **Identity-aware Convolution**: Preserves node-specific identity features in the graph convolution process to avoid over-smoothing.
+2. **Natural Gradient Descent**: Uses NGD for GCN optimization by considering the non-Euclidean nature of graph data, allowing more efficient training.
 
-We welcome contributions to Neo-GCN! To contribute, follow these steps:
-1. Fork the repository
-2. Create a new branch: `git checkout -b feature-branch`
-3. Make your changes and commit: `git commit -m 'Add new feature'`
-4. Push to the branch: `git push origin feature-branch`
-5. Submit a pull request
-
-Please ensure that your code adheres to the repository's code standards and includes appropriate tests.
-
----
+For a detailed explanation of the methodology, please refer to the paper included in this repository.
 
 ## Citation
-
-If you find Neo-GCN helpful in your research, please cite our paper as follows:
-
-```
+If you use Neo-GCN in your research, please cite:
+\`\`\`bibtex
 @article{ghadiri2024neo,
-  title={A Neo-Approach for Node Classification: Optimizing Identity-Aware Graph Convolutional Networks with Natural Gradient Descent in Citation Graphs},
+  title={A Neo-Approach for Node Classification: Optimizing Identity-aware Graph Convolutional Networks with Natural Gradient Descent in Citation Graphs},
   author={Reza Ghadiri, Mojtaba Ghadiri, and Soheila Ashkezari-Toussi},
   journal={Journal of LaTeX Class Files},
-  year={2024},
-  volume={14},
-  number={8},
-  pages={1-12},
+  year={2024}
 }
-```
-
----
+\`\`\`
 
 ## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgements
-
-This work builds upon foundational research in the field of Graph Neural Networks and advanced optimization techniques. Special thanks to the research community for their invaluable contributions to the development of GNNs.
-
-For more information, check out our full [paper](https://linktopaper.com) published in the Journal of LaTeX Class Files.
-
+This project is licensed under the MIT License.
