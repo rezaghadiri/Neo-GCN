@@ -38,7 +38,7 @@ If you use Neo-GCN in your research, please cite:
 @article{ghadiri2024neo,
   title={A Neo-Approach for Node Classification: Optimizing Identity-aware Graph Convolutional Networks with Natural Gradient Descent in Citation Graphs},
   author={Reza Ghadiri, Mojtaba Ghadiri, and Soheila Ashkezari-Toussi},
-  journal={Journal of LaTeX Class Files},
+  journal={TKDE},
   year={2024}
 }
 \`\`\`
