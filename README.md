@@ -25,26 +25,6 @@ Neo-GCN achieves state-of-the-art classification accuracy across these datasets,
 - **CiteSeer**: 80.67% accuracy
 - **PubMed**: 88.27% accuracy
 
-## Installation
-To run Neo-GCN, clone the repository and install the required dependencies:
-\`\`\`bash
-git clone https://github.com/rezaghadiri/Neo-GCN
-cd Neo-GCN
-pip install -r requirements.txt
-\`\`\`
-
-## Usage
-You can train the Neo-GCN model on any of the supported datasets:
-\`\`\`bash
-python train.py --dataset cora
-\`\`\`
-
-Available options include:
-- \`--dataset\`: Choose between \`cora\`, \`citeseer\`, or \`pubmed\`.
-- \`--optimizer\`: Specify the optimizer (\`adam\` or \`sgd\`).
-- \`--learning_rate\`: Set the learning rate (default is \`0.01\`).
-- \`--epochs\`: Number of training epochs (default is \`100\`).
-
 ## Methodology
 Neo-GCN combines the following approaches:
 1. **Identity-aware Convolution**: Preserves node-specific identity features in the graph convolution process to avoid over-smoothing.
