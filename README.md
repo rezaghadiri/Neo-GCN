@@ -1,5 +1,5 @@
 
-# Neo-GCN: Optimizing Identity-Aware Graph Convolutional Networks with Natural Gradient Descent
+# Neo-GCN: Optimizing Identity-aware Graph Convolutional Networks with Natural Gradient Descent
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/username/Neo-GCN) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen) ![License](https://img.shields.io/github/license/username/Neo-GCN)
 
