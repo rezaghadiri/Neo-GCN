@@ -45,7 +45,6 @@ The results validate the effectiveness of combining the simplicity of approaches
 The implementation of the Neo-GCN component is publicly available at:
 [https://www.github.com/rezaghadiri/Neo-GCN](https://www.github.com/rezaghadiri/Neo-GCN)
 
-*(Please note: The user-provided link is for "Neo-GCN". The paper title is "neoTextGCN". Ensure the repository at `github.com/rezaghadiri` reflects the full "neoTextGCN" work if that is the intention, or clarify if "Neo-GCN" is a distinct component.)*
 
 ## How to Cite
 
