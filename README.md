@@ -10,15 +10,15 @@ Node classification in text-attributed graphs (TAGs) is a critical task in graph
 
 The proposed methodology, neoTextGCN, integrates advanced language model embeddings with an identity-aware graph neural network for node classification in text-attributed graphs. The approach consists of two main stages:
 
-1.  **Text Embedding Generation**: Utilizes DeBERTa-v3-large, a transformer-based model, to generate contextual embeddings for node textual attributes (titles and abstracts). This model is fine-tuned using Low-Rank Adaptation (LoRA) on the specific node classification task.
+1.  **Text Embedding Generation**: Utilizes Llama-3.1-8B or DeBERTa-v3-large, a transformer-based model, to generate contextual embeddings for node textual attributes (titles and abstracts). This model is fine-tuned using Low-Rank Adaptation (LoRA) on the specific node classification task.
 2.  **Graph-Based Classification**: Employs an Identity-aware Graph Convolutional Network (ID-GCN) with Natural Gradient Descent (NGD) to perform node classification using the generated embeddings and the graph structure.
 
 This approach aims to address limitations of prior methods such as shallow embeddings, complex joint training, and computational overhead.
 
 ## Key Features
 
-* **Advanced Language Model Integration**: Leverages DeBERTa-v3-large for high-quality text embeddings.
-* **Parameter-Efficient Fine-Tuning**: Employs LoRA for efficient adaptation of the large language model.
+* **Advanced Language Model Integration**: Leverages Llama-3.1-8B for high-quality text embeddings.
+* **Parameter-Efficient Fine-Tuning**: Employs QLoRA for efficient adaptation of the large language model.
 * **Identity-Aware Graph Neural Network**: Uses ID-GCN to preserve node-specific identity features and mitigate over-smoothing.
 * **Efficient Optimization**: Incorporates Natural Gradient Descent (NGD) for optimizing GCN weight parameters by considering the geometry of the parameter space.
 * **Improved Performance**: Demonstrates significant improvements in classification accuracy on benchmark datasets.
@@ -34,11 +34,11 @@ The approach was evaluated on three widely-used benchmark datasets:
 
 The neoTextGCN approach was compared against several baseline models including GCN, GraphSAGE, GAT, GIN, SplineCNN, and recent state-of-the-art methods like SimTeG and GRAD.
 
-* On the **Cora** dataset, neoTextGCN (DeBERTaV3 with LoRA + Neo-GCN) achieved a test accuracy of 84.10 ± 2.30. Neo-GCN (ID-GCN with NGD) using SGD-KFAC achieved an accuracy of 91.03 ± 0.60.
-* On the **CiteSeer** dataset, neoTextGCN (DeBERTaV3 with LoRA + Neo-GCN) achieved a test accuracy of 70.43 ± 1.15. Neo-GCN (ID-GCN with NGD) using Adam-KFAC achieved an accuracy of 80.67 ± 0.98.
+* On the **Cora** dataset, neoTextGCN (Llama-3.1-8B with QLoRA + Neo-GCN) achieved a test accuracy of 87.63 ± 0.63. Neo-GCN (ID-GCN with NGD) using SGD-KFAC achieved an accuracy of 91.03 ± 0.60.
+* On the **CiteSeer** dataset, neoTextGCN (Llama-3.1-8B with QLoRA + Neo-GCN) achieved a test accuracy of 73.50 ± 1.36. Neo-GCN (ID-GCN with NGD) using Adam-KFAC achieved an accuracy of 80.67 ± 0.98.
 * For the **PubMed** dataset, results for the full neoTextGCN approach faced scalability challenges due to hardware limitations. However, GCN (SGD-KFAC) achieved 89.36 ± 0.57, and SplineCNN reached 88.88 ± 0.0.
 
-The results validate the effectiveness of combining the simplicity of approaches like SimTeG with advanced components like DeBERTa-v3-large, LoRA, and ID-GCN with NGD.
+The results validate the effectiveness of combining the simplicity of approaches like SimTeG with advanced components like Llama-3.1-8B with QLoRA, and ID-GCN with NGD.
 
 ## Repository
 
@@ -56,5 +56,5 @@ If you use this work, please cite the original paper:
   author={Reza Ghadiri and Mansoor Fateh and Hoda Mashayekhi},
   journal={ArXiv preprint},
   year={2025},
-  eprint={arXiv:xxxx.xxxxx} -- Placeholder, replace with actual arXiv ID if available
+  eprint={arXiv:xxxx.xxxxx}
 }
