@@ -36,7 +36,6 @@ The neoTextGCN approach was compared against several baseline models including G
 
 * On the **Cora** dataset, neoTextGCN (Llama-3.1-8B with QLoRA + Neo-GCN) achieved a test accuracy of 87.63 ± 0.63. Neo-GCN (ID-GCN with NGD) using SGD-KFAC achieved an accuracy of 91.03 ± 0.60.
 * On the **CiteSeer** dataset, neoTextGCN (Llama-3.1-8B with QLoRA + Neo-GCN) achieved a test accuracy of 73.50 ± 1.36. Neo-GCN (ID-GCN with NGD) using Adam-KFAC achieved an accuracy of 80.67 ± 0.98.
-* For the **PubMed** dataset, results for the full neoTextGCN approach faced scalability challenges due to hardware limitations. However, GCN (SGD-KFAC) achieved 89.36 ± 0.57, and SplineCNN reached 88.88 ± 0.0.
 
 The results validate the effectiveness of combining the simplicity of approaches like SimTeG with advanced components like Llama-3.1-8B with QLoRA, and ID-GCN with NGD.
 
@@ -58,4 +57,5 @@ If you use this work, please cite the original paper:
   year={2025},
   eprint={arXiv:xxxx.xxxxx}
 }
+
 
