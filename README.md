@@ -50,12 +50,13 @@ The implementation of the Neo-GCN component is publicly available at:
 If you use this work, please cite the original paper:
 
 ```bibtex
-@article{Ghadiri2025neoTextGCN,
+@article{ghadiri2026neotextgcn,
   title={neoTextGCN: A Neo-Approach for Node Classification in Text-Attributed Graphs},
-  author={Reza Ghadiri and Mansoor Fateh and Hoda Mashayekhi},
-  journal={ArXiv preprint},
-  year={2025},
-  eprint={arXiv:xxxx.xxxxx}
+  author={Ghadiri, Reza and Fateh, Mansoor and Mashayekhi, Hoda},
+  journal={Knowledge-Based Systems},
+  pages={115647},
+  year={2026},
+  publisher={Elsevier}
 }
 
 
